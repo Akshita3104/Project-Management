@@ -4,9 +4,12 @@ import { FaPlus } from "react-icons/fa";
 import { FiLogIn, FiLogOut, FiUserPlus } from "react-icons/fi";
 import { AiOutlineProject } from "react-icons/ai";
 import { MdDashboard } from "react-icons/md";
-import './App.css';
-import welcomeImage from "../public/image/welcome.svg";
+import "./App.css";
 import About from "./components/About";
+import Contact from "./components/Contact";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import Sidebar from "./components/Sidebar";
 
 const isAuthenticated = false;
 
@@ -59,43 +62,14 @@ function Navbar() {
   );
 }
 
-function Sidebar() {
-  const [projects, setProjects] = useState(["Project Alpha", "Project Beta"]);
-  return (
-    <div className="sidebar">
-      <ul className="project-list">
-        {projects.map((project, index) => (
-          <li key={index} className="project-item">
-            <AiOutlineProject /> {project}
-          </li>
-        ))}
-      </ul>
-      <h2>Workspace</h2>
-      <button className="add-project-button" onClick={() => setProjects([...projects, `Project ${projects.length + 1}`])}>
-        <FaPlus /> Add New Project
-      </button>
-    </div>
-  );
-}
-
 function Dashboard() {
   return (
     <div className="dashboard">
       <h2>Dashboard</h2>
       <p>Welcome to your project management dashboard.</p>
-      <img src={welcomeImage} alt="Welcome" className="welcome-image" />
+      <img src="/image/welcome.svg" alt="Welcome" className="welcome-image" />
     </div>
   );
-}
-
-function Contact() {
-  return <div className="page">Contact Page</div>;
-}
-function Login() {
-  return <div className="page">Login Page</div>;
-}
-function Signup() {
-  return <div className="page">Signup Page</div>;
 }
 
 export default App;

@@ -9,6 +9,7 @@ function About() {
       padding: '1rem',
       backgroundColor: '#fff',
       color: '#333',
+      border: '1px solid black',
       borderRadius: '5px',
       boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)'
     },
@@ -24,6 +25,7 @@ function About() {
       padding: '1rem',
       backgroundColor: '#f8f9fa',
       borderRadius: '5px'
+      
     },
     listItem: {
       padding: '0.5rem 0'
